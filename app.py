@@ -61,7 +61,7 @@ def get_flight_data(origin, destination):
 
 
 # ---------------------- LLM ---------------------- #
-LLM = ChatMistralAI(model="mistral-medium-3-5")
+LLM = ChatMistralAI(model="mistral-small-2603")
 
 agent = create_agent(
     model=LLM,
