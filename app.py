@@ -61,7 +61,7 @@ def get_flight_data(origin, destination):
 
 
 # ---------------------- LLM ---------------------- #
-LLM = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=st.secrets["GOOGLE_API_KEY"])
+LLM = ChatGoogleGenerativeAI(model="gemini-3.5-flash-lite", api_key=st.secrets["GOOGLE_API_KEY"])
 
 agent = create_agent(
     model=LLM,
