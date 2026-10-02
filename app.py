@@ -5,7 +5,7 @@ import os
 import requests
 import streamlit as st
 
-from langchain_mistralai import ChatMistralAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.tools import tool
 from langchain.agents import create_agent
 
@@ -61,7 +61,7 @@ def get_flight_data(origin, destination):
 
 
 # ---------------------- LLM ---------------------- #
-LLM = ChatMistralAI(model="mistral-small-2603")
+LLM = ChatGoogleGenerativeAI(model="gemini-2.5-flash", api_key=st.secrets["GOOGLE_API_KEY"])
 
 agent = create_agent(
     model=LLM,

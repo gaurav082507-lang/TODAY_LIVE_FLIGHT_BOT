@@ -3,6 +3,6 @@ python-dotenv
 requests
 langchain
 langchain-core
-langchain-mistralai
+langchain-google-genai
 tavily-python
 rich
