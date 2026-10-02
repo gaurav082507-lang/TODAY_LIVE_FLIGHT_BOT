@@ -137,6 +137,11 @@ if query:
 
             answer = response["messages"][-1].content
 
+            if isinstance(answer, list):
+                answer = "".join([m.get("text", "") if isinstance(m, dict) else str(m) for m in answer])
+            elif not isinstance(answer, str):
+                answer = str(answer)
+
             st.markdown(answer)
 
     st.session_state.messages.append(
